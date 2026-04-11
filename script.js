@@ -12,11 +12,13 @@ themeBtn.addEventListener('click', () => {
 
 // ========== MOBILE NAV ==========
 const menuBtn = document.getElementById('menuBtn');
-const navLinks = document.getElementById('navLinks');
-menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a =>
-  a.addEventListener('click', () => navLinks.classList.remove('open'))
-);
+const topnav = document.querySelector('.topnav');
+if (menuBtn && topnav) {
+  menuBtn.addEventListener('click', () => topnav.classList.toggle('open'));
+  topnav.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => topnav.classList.remove('open'))
+  );
+}
 
 // ========== FOOTER YEAR ==========
 document.getElementById('year').textContent = new Date().getFullYear();
@@ -34,11 +36,11 @@ const io = new IntersectionObserver(
   },
   { threshold: 0.12 }
 );
-document.querySelectorAll('.timeline__item, .skills__card, .project, .about__grid, .contact__form')
+document.querySelectorAll('.job, .stack__group, .proj, .about, .letter, .section__head, .hero__card')
   .forEach(el => {
     el.style.opacity = 0;
     el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
     io.observe(el);
   });
 

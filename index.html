@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,326 +7,576 @@
   <title>Vishal Kumar Roy — Full Stack Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ===================== NAV ===================== -->
-  <header class="nav">
-    <div class="container nav__inner">
-      <a href="#home" class="nav__logo"><span class="nav__logo-mark">V</span>ishal</a>
-      <nav class="nav__links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+  <!-- Paper grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- =============== TOP BAR =============== -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a href="#home" class="mark">
+        <span class="mark__box">VR</span>
+        <span class="mark__text">Vishal Kumar Roy<span class="mark__dash"> — </span><em>full stack eng.</em></span>
+      </a>
+      <nav class="topnav">
+        <a href="#about"><span class="num">01</span>about</a>
+        <a href="#experience"><span class="num">02</span>work</a>
+        <a href="#skills"><span class="num">03</span>stack</a>
+        <a href="#projects"><span class="num">04</span>projects</a>
+        <a href="#contact"><span class="num">05</span>contact</a>
       </nav>
-      <div class="nav__actions">
-        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
-          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        </button>
-        <button id="menuBtn" class="icon-btn menu-btn" aria-label="Menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+        <span class="theme-btn__dot"></span><span class="theme-btn__label">theme</span>
+      </button>
+      <button id="menuBtn" class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>available for hire</span><span>✦</span>
+        <span>react native</span><span>✦</span>
+        <span>full stack</span><span>✦</span>
+        <span>based in delhi, in</span><span>✦</span>
+        <span>currently @ klym</span><span>✦</span>
+        <span>available for hire</span><span>✦</span>
+        <span>react native</span><span>✦</span>
+        <span>full stack</span><span>✦</span>
+        <span>based in delhi, in</span><span>✦</span>
+        <span>currently @ klym</span><span>✦</span>
       </div>
     </div>
   </header>
 
-  <!-- ===================== HERO ===================== -->
+  <!-- =============== HERO =============== -->
   <section id="home" class="hero">
-    <div class="container hero__inner">
-      <p class="hero__greeting reveal">Hello, I'm</p>
-      <h1 class="hero__name reveal">Vishal Kumar Roy.</h1>
-      <h2 class="hero__tagline reveal">I build cross-platform mobile &amp; web apps.</h2>
-      <p class="hero__sub reveal">Full Stack Engineer specializing in <span class="accent">React Native</span>, <span class="accent">React</span>, <span class="accent">Node.js</span>, and <span class="accent">TypeScript</span>. Currently Founding Engineer at KLYM.</p>
-      <div class="hero__cta reveal">
-        <a href="#projects" class="btn btn--primary">View Projects</a>
-        <a href="Vishal_Kumar_Roy_Resume.pdf" class="btn btn--ghost" download>Download Resume</a>
+   
+
+    <div class="hero__grid">
+      <div class="hero__left">
+        <p class="hero__hello"><span class="scribble"></span> hello there, I'm</p>
+        <h1 class="hero__name">Vishal Kumar Roy<span class="hero__period">.</span></h1>
+        <h2 class="hero__role">
+          A <em>full&nbsp;stack</em> engineer building
+          <span class="hero__underline">mobile&nbsp;&amp;&nbsp;web apps</span>
+          that people actually use.
+        </h2>
+        <p class="hero__pitch">
+          I ship cross-platform products in
+          <mark>React&nbsp;Native</mark>, <mark>React</mark>,
+          <mark>Node.js</mark>, and <mark>TypeScript</mark>.
+          Currently Founding Engineer at KLYM — owning the mobile app
+          and a slice of the backend that powers real-time consultations
+          and video sessions for 25K+ users.
+        </p>
+        <div class="hero__cta">
+          <a href="#contact" class="btn">→ contact me</a>
+          <a href="Vishal_Kumar_Roy_Resume.pdf" class="btn btn--ghost" download>get my resume</a>
+          <a href="#projects" class="btn btn--link">view projects ↗</a>
+        </div>
+        <div class="hero__socials">
+          <a href="https://github.com/vkroy11" target="_blank" rel="noopener">github</a>
+          <span>·</span>
+          <a href="https://www.linkedin.com/in/vishal-roy-2a4955233/" target="_blank" rel="noopener">linkedin</a>
+          <span>·</span>
+          <a href="mailto:vroy218@gmail.com">vroy218@gmail.com</a>
+        </div>
       </div>
-      <div class="hero__socials reveal">
-        <a href="https://github.com/vkroy11" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.3-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.3-.51-1.47.11-3.07 0 0 .97-.31 3.17 1.18a10.96 10.96 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.6.23 2.77.11 3.07.73.81 1.18 1.84 1.18 3.1 0 4.43-2.68 5.4-5.24 5.7.41.35.78 1.04.78 2.1v3.11c0 .31.21.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/vishal-roy-2a4955233/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-        </a>
-        <a href="mailto:vroy218@gmail.com" aria-label="Email">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </a>
-      </div>
+
+      <aside class="hero__card" aria-label="currently">
+        <div class="card__tag"><span class="pulse"></span> currently</div>
+        <p class="card__role">Founding Engineer</p>
+        <p class="card__where">@ KLYM Gram AI Technologies</p>
+        <hr class="card__rule" />
+        <dl class="card__stats">
+          <div><dt>building</dt><dd>React Native app + Node.js API</dd></div>
+          <div><dt>since</dt><dd>Jul 2025</dd></div>
+          <div><dt>users</dt><dd>25K+ on the app</dd></div>
+          <div><dt>based in</dt><dd>New Delhi, IN</dd></div>
+        </dl>
+        <hr class="card__rule" />
+        <p class="card__sign"><em>open to</em> <strong>full stack roles</strong> — remote friendly.</p>
+        <div class="card__stamp" aria-hidden="true">
+          <svg viewBox="0 0 160 160" width="100%" height="100%">
+            <defs>
+              <path id="stampCircle" d="M80,80 m-64,0 a64,64 0 1,1 128,0 a64,64 0 1,1 -128,0" />
+            </defs>
+            <circle cx="80" cy="80" r="72" fill="none" stroke="currentColor" stroke-width="2" />
+            <circle cx="80" cy="80" r="62" fill="none" stroke="currentColor" stroke-width="1" />
+            <text font-family="JetBrains Mono, monospace" font-size="13" fill="currentColor" letter-spacing="4">
+              <textPath href="#stampCircle" startOffset="0">★ AVAILABLE FOR HIRE ★ OPEN TO ROLES ★</textPath>
+            </text>
+            <text x="80" y="86" text-anchor="middle" font-family="Instrument Serif, serif" font-size="26" fill="currentColor">2026</text>
+          </svg>
+        </div>
+      </aside>
     </div>
-    <div class="hero__glow"></div>
   </section>
 
-  <!-- ===================== ABOUT ===================== -->
+  <!-- =============== ABOUT =============== -->
   <section id="about" class="section">
-    <div class="container">
-      <p class="eyebrow">01 — About</p>
-      <h2 class="section__title">Get to know me</h2>
-      <div class="about__grid">
-        <div class="about__text">
-          <p>I'm a Full Stack Engineer with <strong>2+ years</strong> of experience shipping cross-platform mobile and web applications in fast-paced startups. I currently work at <strong>KLYM</strong> as a Founding Engineer, where I architect a React Native app and the Node.js backend powering real-time consultations and video sessions.</p>
-          <p>Before KLYM, I worked at <strong>Factory Kaam</strong>, shipping a React Native + Expo app to iOS, Android, and web with NativeWind and a full EAS release pipeline, plus REST integrations and an internal ATS tool. I enjoy owning features end-to-end — from API design to pixel-polished UI — and collaborating closely with designers and product.</p>
-          <p>I hold a B.Tech in Mechanical Engineering with a minor in Computer Engineering from Delhi Technological University (8.8 CGPA). Outside of work I build side projects, grind LeetCode, and occasionally show up to hackathons.</p>
-        </div>
-        <aside class="about__card">
-          <ul class="about__facts">
-            <li><span>Location</span><strong>New Delhi, IN</strong></li>
-            <li><span>Experience</span><strong>2+ years</strong></li>
-            <li><span>Focus</span><strong>RN · React · Node · TS</strong></li>
-            <li><span>Open to</span><strong>Full stack roles (remote)</strong></li>
+    <aside class="section__num" aria-hidden="true">01</aside>
+    <div class="section__head">
+      <span class="label">§ about</span>
+      <h2>A short, honest introduction.</h2>
+    </div>
+
+    <div class="about">
+      <div class="about__prose">
+        <p class="dropcap">
+          I'm a full stack engineer with 2+ years of experience shipping
+          cross-platform mobile and web applications in fast-paced
+          startups. I currently work at <strong>KLYM</strong> as a
+          Founding Engineer, where I architect a React Native app
+          <em>and</em> the Node.js backend powering real-time
+          consultations and video sessions.
+        </p>
+        <p>
+          Before KLYM, I worked at <strong>Factory Kaam</strong>, shipping
+          a React Native + Expo app to iOS, Android, and web with
+          NativeWind and a full EAS release pipeline — plus REST
+          integrations and an internal ATS tool. I like owning features
+          end-to-end: from API contract to pixel-polished UI to store
+          release, in close loop with designers and product.
+        </p>
+        <p>
+          I hold a B.Tech in Mechanical Engineering (minor in Computer
+          Engineering) from Delhi Technological University — 8.8 CGPA.
+          Outside of shipping, I build side projects, grind LeetCode,
+          and show up to hackathons when the weekend allows.
+        </p>
+      </div>
+      <aside class="about__side">
+        <dl class="specsheet">
+          <div><dt>located</dt><dd>New&nbsp;Delhi,&nbsp;IN</dd></div>
+          <div><dt>experience</dt><dd>2+&nbsp;years</dd></div>
+          <div><dt>stack</dt><dd>RN · React · Node · TS</dd></div>
+          <div><dt>status</dt><dd><span class="pulse"></span>open to roles</dd></div>
+          <div><dt>pref.&nbsp;mode</dt><dd>remote</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- =============== EXPERIENCE =============== -->
+  <section id="experience" class="section section--rule">
+    <aside class="section__num" aria-hidden="true">02</aside>
+    <div class="section__head">
+      <span class="label">§ work history</span>
+      <h2>Places I've written code for.</h2>
+    </div>
+
+    <ol class="worklist">
+
+      <li class="job">
+        <div class="job__years"><span>Jul 2025</span><span class="to">—</span><span>now</span></div>
+        <div class="job__body">
+          <h3>
+            <span class="job__role">Founding Engineer</span>
+            <span class="at">at</span>
+            <a class="job__co" href="#" onclick="return false">KLYM Gram AI Technologies</a>
+          </h3>
+          <p class="job__loc">Delhi,&nbsp;IN &nbsp;·&nbsp; mobile + backend</p>
+          <ul class="job__bullets">
+            <li>Leading end-to-end development of a cross-platform mobile app in <strong>React Native</strong>, <strong>TypeScript</strong>, and <strong>Node.js (Express)</strong>, shipping signed builds to the App Store and Google Play via EAS Build &amp; Submit.</li>
+            <li>Architected the frontend for real-time consultations and video sessions; defined component structure, navigation, and state patterns from scratch.</li>
+            <li>Implemented secure OAuth flows and analytics / push-notification integrations (Pushwoosh, GA); shipped OTA updates with EAS Update.</li>
           </ul>
-        </aside>
-      </div>
-    </div>
+          <p class="job__tags">React Native · TypeScript · Expo · Node.js · Express · EAS · OAuth</p>
+        </div>
+      </li>
+
+      <li class="job">
+        <div class="job__years"><span>May 2024</span><span class="to">—</span><span>Jul 2025</span></div>
+        <div class="job__body">
+          <h3>
+            <span class="job__role">App Developer Intern</span>
+            <span class="at">at</span>
+            <a class="job__co" href="#" onclick="return false">UdyogTech Ventures (Factory Kaam)</a>
+          </h3>
+          <p class="job__loc">Delhi,&nbsp;IN &nbsp;·&nbsp; frontend lead</p>
+          <ul class="job__bullets">
+            <li>Led frontend development of Factory Kaam's cross-platform app in <strong>React Native</strong>, <strong>Expo</strong>, and <strong>TypeScript</strong>, shipping consistently to iOS, Android, and web.</li>
+            <li>Designed responsive UI components with <strong>NativeWind (Tailwind)</strong> and implemented type-safe navigation using Expo Router.</li>
+            <li>Integrated RESTful APIs via Axios and built an internal Applicant Tracking System that improved recruiter efficiency by <strong>150%</strong>.</li>
+            <li>Automated CI/CD with EAS Build and managed App&nbsp;Store + Play&nbsp;Store releases; added multi-language support (Hindi, English) with a scalable i18n pipeline.</li>
+          </ul>
+          <p class="job__tags">React Native · Expo · NativeWind · Expo Router · Axios · i18n · CI/CD</p>
+        </div>
+      </li>
+
+      <li class="job">
+        <div class="job__years"><span>Dec 2022</span><span class="to">—</span><span>Mar 2023</span></div>
+        <div class="job__body">
+          <h3>
+            <span class="job__role">Frontend Developer Intern</span>
+            <span class="at">at</span>
+            <a class="job__co" href="#" onclick="return false">Scientific Society, AIIMS Delhi</a>
+          </h3>
+          <p class="job__loc">Delhi,&nbsp;IN &nbsp;·&nbsp; scisocaiims.com</p>
+          <ul class="job__bullets">
+            <li>Engineered <strong>scisocaiims.com</strong> from concept to deployment — a responsive, accessible frontend in <strong>HTML, CSS, and JavaScript</strong> that attracted over <strong>14,000</strong> new users.</li>
+            <li>Developed the primary landing pages for the annual 'Insight' fest, driving <strong>24,500+</strong> combined page views across event sections.</li>
+            <li>Optimized website performance for fast load times and strong SEO rankings, increasing organic traffic and visibility.</li>
+          </ul>
+          <p class="job__tags">HTML · CSS · JavaScript · responsive · SEO</p>
+        </div>
+      </li>
+
+      <li class="job">
+        <div class="job__years"><span>Jun 2024</span><span class="to">—</span><span>Aug 2024</span></div>
+        <div class="job__body">
+          <h3>
+            <span class="job__role">Summer Research Intern</span>
+            <span class="at">at</span>
+            <a class="job__co" href="#" onclick="return false">DRDO — Solid State Physics Laboratory</a>
+          </h3>
+          <p class="job__loc">Delhi,&nbsp;IN &nbsp;·&nbsp; simulation</p>
+          <ul class="job__bullets">
+            <li>Ran MatLab simulations on cryochamber geometries, targeting <strong>6–7s</strong> cooldown at 300&nbsp;K ambient for military night-vision cameras.</li>
+            <li>Supported experimental setups under senior scientists and authored technical reports documenting procedures and findings.</li>
+          </ul>
+          <p class="job__tags">MatLab · simulation · research</p>
+        </div>
+      </li>
+
+    </ol>
   </section>
 
-  <!-- ===================== EXPERIENCE ===================== -->
-  <section id="experience" class="section section--alt">
-    <div class="container">
-      <p class="eyebrow">02 — Experience</p>
-      <h2 class="section__title">Where I've worked</h2>
-      <ol class="timeline">
-
-        <li class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__content">
-            <div class="timeline__head">
-              <h3>Founding Engineer</h3>
-              <span class="timeline__date">Jul 2025 — Present</span>
-            </div>
-            <p class="timeline__company">KLYM Gram AI Technologies Pvt Ltd · Delhi, IN</p>
-            <ul>
-              <li>Leading end-to-end development of a cross-platform mobile app in <strong>React Native</strong>, <strong>TypeScript</strong>, and Node.js (Express), shipping signed builds to the App Store and Google Play via <strong>EAS Build &amp; Submit</strong>.</li>
-              <li>Architected the frontend for real-time consultations and video sessions; defined component structure, navigation, and state patterns from scratch.</li>
-              <li>Implemented secure OAuth flows and analytics / push-notification integrations (Pushwoosh, GA); shipped OTA updates with EAS Update.</li>
-            </ul>
-            <div class="chips">
-              <span>React Native</span><span>TypeScript</span><span>Expo</span><span>Node.js</span><span>EAS</span><span>OAuth</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__content">
-            <div class="timeline__head">
-              <h3>App Developer Intern</h3>
-              <span class="timeline__date">May 2024 — Jul 2025</span>
-            </div>
-            <p class="timeline__company">UdyogTech Ventures (Factory Kaam) · Delhi, IN</p>
-            <ul>
-              <li>Led frontend development of Factory Kaam's cross-platform app in <strong>React Native</strong>, <strong>Expo</strong>, and <strong>TypeScript</strong>, shipping consistently to iOS, Android, and web.</li>
-              <li>Designed responsive UI components with <strong>NativeWind (Tailwind)</strong> and implemented type-safe navigation using Expo Router.</li>
-              <li>Integrated RESTful APIs via Axios and built an internal Applicant Tracking System that improved recruiter efficiency by <strong>150%</strong>.</li>
-              <li>Automated CI/CD with EAS Build and managed App Store + Play Store releases; added multi-language support (Hindi, English) with a scalable i18n pipeline.</li>
-            </ul>
-            <div class="chips">
-              <span>React Native</span><span>Expo</span><span>NativeWind</span><span>Expo Router</span><span>Axios</span><span>i18n</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__content">
-            <div class="timeline__head">
-              <h3>Frontend Developer Intern</h3>
-              <span class="timeline__date">Dec 2022 — Mar 2023</span>
-            </div>
-            <p class="timeline__company">Scientific Society, AIIMS Delhi · Delhi, IN</p>
-            <ul>
-              <li>Engineered <strong>scisocaiims.com</strong> from concept to deployment — a responsive, accessible frontend in <strong>HTML, CSS, and JavaScript</strong> that attracted over <strong>14,000</strong> new users.</li>
-              <li>Developed the primary landing pages for the annual 'Insight' fest, driving <strong>24,500+</strong> combined page views across event sections.</li>
-              <li>Optimized website performance for fast load times and strong SEO rankings, increasing organic traffic and visibility.</li>
-            </ul>
-            <div class="chips">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span><span>SEO</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__content">
-            <div class="timeline__head">
-              <h3>Summer Research Intern</h3>
-              <span class="timeline__date">Jun 2024 — Aug 2024</span>
-            </div>
-            <p class="timeline__company">DRDO — Solid State Physics Laboratory · Delhi, IN</p>
-            <ul>
-              <li>Ran MatLab simulations on cryochamber geometries, targeting <strong>6–7s</strong> cooldown at 300 K ambient for military night-vision cameras.</li>
-              <li>Supported experimental setups under senior scientists and authored technical reports documenting procedures and findings.</li>
-            </ul>
-            <div class="chips">
-              <span>MatLab</span><span>Simulation</span><span>Research</span>
-            </div>
-          </div>
-        </li>
-
-      </ol>
+  <!-- =============== SKILLS =============== -->
+  <section id="skills" class="section section--rule">
+    <aside class="section__num" aria-hidden="true">03</aside>
+    <div class="section__head">
+      <span class="label">§ the stack</span>
+      <h2>Tools I reach for.</h2>
     </div>
-  </section>
 
-  <!-- ===================== SKILLS ===================== -->
-  <section id="skills" class="section">
-    <div class="container">
-      <p class="eyebrow">03 — Skills</p>
-      <h2 class="section__title">Things I work with</h2>
-      <div class="skills__grid">
-        <div class="skills__card">
+    <div class="stack">
+
+      <div class="stack__group">
+        <div class="stack__label">
+          <span class="num">i.</span>
           <h3>Languages</h3>
-          <div class="chips">
-            <span>JavaScript</span><span>TypeScript</span><span>HTML</span><span>CSS</span><span>Python</span><span>C/C++</span><span>SQL</span><span>MatLab</span>
-          </div>
+          <span class="dim">the alphabets I think in</span>
         </div>
-        <div class="skills__card">
+        <div class="tiles">
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />
+            <span>JavaScript</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" />
+            <span>TypeScript</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" />
+            <span>HTML5</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" />
+            <span>CSS3</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" />
+            <span>Python</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="" />
+            <span>C / C++</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" />
+            <span>SQL</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="stack__group">
+        <div class="stack__label">
+          <span class="num">ii.</span>
           <h3>Frameworks</h3>
-          <div class="chips">
-            <span>React</span><span>React Native</span><span>Next.js</span><span>Node.js</span><span>Express</span><span>Socket.IO</span>
-          </div>
+          <span class="dim">what I build with daily</span>
         </div>
-        <div class="skills__card">
+        <div class="tiles">
+          <a class="tile tile--featured" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" />
+            <span>React</span>
+          </a>
+          <a class="tile tile--featured" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" />
+            <span>React Native</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="" />
+            <span>Next.js</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" />
+            <span>Node.js</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="" />
+            <span>Express</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" alt="" />
+            <span>Socket.IO</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="stack__group">
+        <div class="stack__label">
+          <span class="num">iii.</span>
           <h3>Styling &amp; UI</h3>
-          <div class="chips">
-            <span>Tailwind CSS</span><span>NativeWind</span><span>Bootstrap</span><span>Responsive Design</span><span>Accessibility</span>
-          </div>
+          <span class="dim">making things look right</span>
         </div>
-        <div class="skills__card">
+        <div class="tiles">
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="" />
+            <span>Tailwind CSS</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="" />
+            <span>NativeWind</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" />
+            <span>Bootstrap</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="" />
+            <span>Figma</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="stack__group">
+        <div class="stack__label">
+          <span class="num">iv.</span>
           <h3>Tools &amp; Platform</h3>
-          <div class="chips">
-            <span>Expo</span><span>Expo Router</span><span>EAS Build</span><span>Git / GitHub</span><span>Axios</span><span>Zod</span><span>Zustand</span><span>React Flow</span>
-          </div>
+          <span class="dim">how I ship</span>
         </div>
-        <div class="skills__card">
+        <div class="tiles">
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" />
+            <span>Git</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" />
+            <span>GitHub</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="" />
+            <span>VS Code</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="" />
+            <span>npm</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="" />
+            <span>Postman</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="" />
+            <span>Vercel</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" />
+            <span>EAS Build</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="stack__group">
+        <div class="stack__label">
+          <span class="num">v.</span>
           <h3>Databases</h3>
-          <div class="chips">
-            <span>MongoDB</span><span>MySQL</span><span>SQLite</span><span>Prisma</span>
-          </div>
+          <span class="dim">where the data lives</span>
         </div>
-        <div class="skills__card">
-          <h3>Other</h3>
-          <div class="chips">
-            <span>OAuth</span><span>REST APIs</span><span>CI/CD</span><span>App Store / Play Store</span><span>i18n</span><span>Pushwoosh</span><span>GA</span>
-          </div>
+        <div class="tiles">
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" />
+            <span>MongoDB</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" />
+            <span>MySQL</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="" />
+            <span>SQLite</span>
+          </a>
+          <a class="tile" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" alt="" />
+            <span>Prisma</span>
+          </a>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- ===================== PROJECTS ===================== -->
-  <section id="projects" class="section section--alt">
-    <div class="container">
-      <p class="eyebrow">04 — Projects</p>
-      <h2 class="section__title">Things I've built</h2>
-      <div class="projects__grid">
+  <!-- =============== PROJECTS =============== -->
+  <section id="projects" class="section section--rule">
+    <aside class="section__num" aria-hidden="true">04</aside>
+    <div class="section__head">
+      <span class="label">§ selected projects</span>
+      <h2>Things I built on purpose.</h2>
+    </div>
 
-        <article class="project">
-          <div class="project__thumb project__thumb--1">
-            <span>AI</span>
-          </div>
-          <div class="project__body">
-            <h3>AI Workflow Builder <span class="project__tag">Weavy-style</span></h3>
-            <p>Full-stack visual workflow builder with a drag-and-drop canvas powered by React Flow. Custom Text, Image, and LLM nodes with multimodal Gemini + Imagen integration, Prisma persistence, and 20-step undo/redo via Zustand.</p>
-            <div class="chips">
-              <span>Next.js 16</span><span>React 19</span><span>TypeScript</span><span>React Flow</span><span>Prisma</span><span>Gemini</span>
-            </div>
-            <div class="project__links">
-              <a href="https://github.com/vkroy11" target="_blank" rel="noopener">Code →</a>
-            </div>
-          </div>
-        </article>
+    <div class="projects">
 
-        <article class="project">
-          <div class="project__thumb project__thumb--2">
-            <span>FIT</span>
+      <article class="proj">
+        <div class="proj__media">
+          <div class="proj__frame">
+            <img src="https://picsum.photos/seed/ai-workflow/880/560" alt="AI Workflow Builder screenshot" loading="lazy" />
+            <span class="proj__dot proj__dot--live">live</span>
           </div>
-          <div class="project__body">
-            <h3>Fitness Tracking App</h3>
-            <p>All-in-one workout and macro tracker in React Native with progressive-overload tracking and USDA food-database search. Interactive charts for daily fitness progress and automated diary entries for logged workouts and meals.</p>
-            <div class="chips">
-              <span>React Native</span><span>Expo</span><span>Charts</span><span>USDA API</span>
-            </div>
-            <div class="project__links">
-              <a href="https://github.com/vkroy11" target="_blank" rel="noopener">Code →</a>
-            </div>
+          <div class="proj__badge">N°01</div>
+        </div>
+        <div class="proj__main">
+          <span class="label">case study — 2025</span>
+          <h3>AI Workflow Builder <span class="proj__kind">weavy-style</span></h3>
+          <p>Full-stack visual workflow builder with a drag-and-drop canvas powered by React Flow. Custom Text, Image, and LLM nodes with multimodal Gemini + Imagen integration, Prisma persistence, and 20-step undo/redo via Zustand.</p>
+          <ul class="proj__highlights">
+            <li>Visual drag-and-drop node editor with live execution</li>
+            <li>Multimodal text + image generation in a single run</li>
+            <li>Workflow persistence with SQLite + Prisma</li>
+          </ul>
+          <p class="proj__stack">Next.js&nbsp;16 · React&nbsp;19 · TypeScript · React&nbsp;Flow · Prisma · Gemini</p>
+          <div class="proj__actions">
+            <a class="proj__link" href="https://github.com/vkroy11" target="_blank" rel="noopener">view code<span>↗</span></a>
+            <a class="proj__link proj__link--ghost" href="#" onclick="return false">read more<span>↗</span></a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="project">
-          <div class="project__thumb project__thumb--3">
-            <span>C4</span>
+      <article class="proj proj--flip">
+        <div class="proj__media">
+          <div class="proj__frame">
+            <img src="https://picsum.photos/seed/fitness-rn/880/560" alt="Fitness Tracking App screenshot" loading="lazy" />
+            <span class="proj__dot">mobile</span>
           </div>
-          <div class="project__body">
-            <h3>Online Multiplayer Connect Four</h3>
-            <p>Real-time multiplayer Connect Four with a React frontend and a Node + Express backend. Socket.IO drives instant move synchronization plus real-time opponent cursor tracking for an interactive feel.</p>
-            <div class="chips">
-              <span>React</span><span>Node.js</span><span>Express</span><span>Socket.IO</span>
-            </div>
-            <div class="project__links">
-              <a href="https://github.com/vkroy11" target="_blank" rel="noopener">Code →</a>
-            </div>
+          <div class="proj__badge">N°02</div>
+        </div>
+        <div class="proj__main">
+          <span class="label">mobile — 2024</span>
+          <h3>Fitness Tracking App</h3>
+          <p>All-in-one workout and macro tracker in React Native with progressive-overload tracking and USDA food-database search. Interactive charts for daily fitness progress and automated diary entries for logged workouts and meals.</p>
+          <ul class="proj__highlights">
+            <li>Progressive-overload tracking with weight/rep history</li>
+            <li>USDA food database search + macro logging</li>
+            <li>Auto-generated daily diary entries</li>
+          </ul>
+          <p class="proj__stack">React&nbsp;Native · Expo · Charts · USDA&nbsp;API</p>
+          <div class="proj__actions">
+            <a class="proj__link" href="https://github.com/vkroy11" target="_blank" rel="noopener">view code<span>↗</span></a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="project">
-          <div class="project__thumb project__thumb--4">
-            <span>AIIMS</span>
+      <article class="proj">
+        <div class="proj__media">
+          <div class="proj__frame">
+            <img src="https://picsum.photos/seed/connect-four/880/560" alt="Connect Four game screenshot" loading="lazy" />
+            <span class="proj__dot">realtime</span>
           </div>
-          <div class="project__body">
-            <h3>scisocaiims.com</h3>
-            <p>Responsive, accessible website for the Scientific Society of AIIMS Delhi, built from scratch in HTML, CSS, and JavaScript. Attracted 14K+ new users and drove 24.5K+ page views across the 'Insight' fest event pages.</p>
-            <div class="chips">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>SEO</span>
-            </div>
-            <div class="project__links">
-              <a href="https://scisocaiims.com" target="_blank" rel="noopener">Live →</a>
-            </div>
+          <div class="proj__badge">N°03</div>
+        </div>
+        <div class="proj__main">
+          <span class="label">side project — 2024</span>
+          <h3>Online Multiplayer Connect Four</h3>
+          <p>Real-time multiplayer Connect Four with a React frontend and a Node + Express backend. Socket.IO drives instant move synchronization plus real-time opponent cursor tracking for an interactive feel.</p>
+          <ul class="proj__highlights">
+            <li>Room-based matchmaking over Socket.IO</li>
+            <li>Live opponent cursor tracking between clients</li>
+            <li>Pure client/server state sync, no game framework</li>
+          </ul>
+          <p class="proj__stack">React · Node.js · Express · Socket.IO</p>
+          <div class="proj__actions">
+            <a class="proj__link" href="https://github.com/vkroy11" target="_blank" rel="noopener">view code<span>↗</span></a>
           </div>
-        </article>
+        </div>
+      </article>
 
-      </div>
+      <article class="proj proj--flip">
+        <div class="proj__media">
+          <div class="proj__frame">
+            <img src="https://picsum.photos/seed/aiims-site/880/560" alt="scisocaiims.com screenshot" loading="lazy" />
+            <span class="proj__dot proj__dot--live">live</span>
+          </div>
+          <div class="proj__badge">N°04</div>
+        </div>
+        <div class="proj__main">
+          <span class="label">client work — 2022</span>
+          <h3>scisocaiims.com</h3>
+          <p>Responsive, accessible website for the Scientific Society of AIIMS Delhi, built from scratch in HTML, CSS, and JavaScript. Attracted 14K+ new users and drove 24.5K+ page views across the 'Insight' fest event pages.</p>
+          <ul class="proj__highlights">
+            <li><strong>14,000+</strong> new users post-launch</li>
+            <li><strong>24,500+</strong> page views across event sections</li>
+            <li>Hand-tuned performance + SEO from scratch</li>
+          </ul>
+          <p class="proj__stack">HTML · CSS · JavaScript · SEO</p>
+          <div class="proj__actions">
+            <a class="proj__link" href="https://scisocaiims.com" target="_blank" rel="noopener">visit site<span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </section>
 
-  <!-- ===================== CONTACT ===================== -->
-  <section id="contact" class="section">
-    <div class="container">
-      <p class="eyebrow">05 — Contact</p>
-      <h2 class="section__title">Let's build something</h2>
-      <p class="contact__lede">Got a role, a project, or just want to say hi? Drop a message below and I'll get back to you.</p>
-      <form class="contact__form" id="contactForm" onsubmit="return sendMessage(event)">
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
+  <!-- =============== CONTACT =============== -->
+  <section id="contact" class="section section--rule contact">
+    <aside class="section__num" aria-hidden="true">05</aside>
+    <div class="section__head">
+      <span class="label">§ contact</span>
+      <h2>Drop me a line.</h2>
+    </div>
+
+    <div class="contact__wrap">
+      <p class="contact__lede">
+        Got a role, a project, or just want to say hi?
+        Fill this out, or email me directly at
+        <a href="mailto:vroy218@gmail.com">vroy218@gmail.com</a>.
+      </p>
+      <form class="letter" id="contactForm" onsubmit="return sendMessage(event)">
+        <p class="letter__line"><span class="letter__key">to —</span><span class="letter__val">Vishal</span></p>
+        <p class="letter__line"><span class="letter__key">from —</span>
+          <input type="text" id="name" name="name" placeholder="your name" required />
+        </p>
+        <p class="letter__line"><span class="letter__key">reply to —</span>
           <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </p>
+        <p class="letter__line letter__line--msg"><span class="letter__key">re —</span>
+          <textarea id="message" name="message" rows="6" placeholder="what's on your mind?" required></textarea>
+        </p>
+        <div class="letter__foot">
+          <button type="submit" class="btn btn--big">send it →</button>
+          <span class="label">(opens your mail client)</span>
         </div>
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full">SHOOT →</button>
       </form>
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <a href="#home" class="nav__logo"><span class="nav__logo-mark">V</span>ishal</a>
-      <p>© <span id="year"></span> Vishal Kumar Roy. Built with HTML, CSS, and a lot of coffee.</p>
-      <div class="footer__socials">
-        <a href="https://github.com/vkroy11" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/vishal-roy-2a4955233/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:vroy218@gmail.com">Email</a>
+  <!-- =============== FOOTER =============== -->
+  <footer class="foot">
+    <hr />
+    <div class="foot__inner">
+      <div>
+        <p class="foot__big">Thanks for reading.</p>
+        <p class="label">© <span id="year"></span> Vishal Kumar Roy · Hand-built in HTML &amp; CSS · Last updated 2026</p>
       </div>
+      <ul class="foot__links">
+        <li><a href="https://github.com/vkroy11" target="_blank" rel="noopener">github ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/vishal-roy-2a4955233/" target="_blank" rel="noopener">linkedin ↗</a></li>
+        <li><a href="mailto:vroy218@gmail.com">email ↗</a></li>
+        <li><a href="Vishal_Kumar_Roy_Resume.pdf" download>resume ↗</a></li>
+      </ul>
     </div>
   </footer>
 
