@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111110"/>
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#f3ede0" stroke-width="1.5"/>
+  <text x="80" y="200" font-family="serif" font-size="100" font-weight="400" fill="#f3ede0" letter-spacing="-2">Vishal Kumar Roy</text>
+  <text x="80" y="270" font-family="serif" font-size="100" font-weight="400" fill="#f3ede0" letter-spacing="-2" font-style="italic" opacity="0.6">.</text>
+  <line x1="80" y1="310" x2="440" y2="310" stroke="#c8361d" stroke-width="2.5"/>
+  <text x="80" y="370" font-family="monospace" font-size="26" fill="#c8361d" letter-spacing="3">FULL STACK ENGINEER</text>
+  <text x="80" y="430" font-family="monospace" font-size="20" fill="#8a8478" letter-spacing="1.5">REACT NATIVE · REACT · NODE.JS · TYPESCRIPT</text>
+  <text x="80" y="480" font-family="monospace" font-size="20" fill="#8a8478" letter-spacing="1.5">KOTLIN · SWIFT · AGORA · RAZORPAY</text>
+  <text x="80" y="550" font-family="monospace" font-size="18" fill="#5a564c" letter-spacing="2">VISHALKUMARROY.XYZ</text>
+  <text x="1080" y="550" font-family="serif" font-size="48" fill="#f3ede0" text-anchor="end" opacity="0.12">VR</text>
+</svg>
