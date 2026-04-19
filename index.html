@@ -590,7 +590,10 @@
         Fill this out, or email me directly at
         <a href="mailto:vroy218@gmail.com">vroy218@gmail.com</a>.
       </p>
-      <form class="letter" id="contactForm" onsubmit="return sendMessage(event)">
+      <form class="letter" id="contactForm">
+        <input type="hidden" name="access_key" value="9db23df6-98b5-4d96-be26-63f0de3a133b" />
+        <input type="hidden" name="subject" value="Portfolio contact from vishalkumarroy.xyz" />
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
         <p class="letter__line"><span class="letter__key">to —</span><span class="letter__val">Vishal</span></p>
         <p class="letter__line"><span class="letter__key">from —</span>
           <input type="text" id="name" name="name" placeholder="your name" required />
@@ -602,8 +605,8 @@
           <textarea id="message" name="message" rows="6" placeholder="what's on your mind?" required></textarea>
         </p>
         <div class="letter__foot">
-          <button type="submit" class="btn btn--big">send it →</button>
-          <span class="label">(opens your mail client)</span>
+          <button type="submit" class="btn btn--big" id="contactSubmit">send it →</button>
+          <span class="label" id="formStatus">(no app needed — sends from this page)</span>
         </div>
       </form>
     </div>

@@ -44,14 +44,32 @@ document.querySelectorAll('.job, .stack__group, .proj, .about, .letter, .section
     io.observe(el);
   });
 
-// ========== CONTACT FORM (mailto fallback) ==========
-function sendMessage(e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-  const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
-  window.location.href = `mailto:vroy218@gmail.com?subject=${subject}&body=${body}`;
-  return false;
+// ========== CONTACT FORM (Web3Forms — in-page submit) ==========
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+const submitBtn = document.getElementById('contactSubmit');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    formStatus.textContent = 'sending…';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(contactForm),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.success) {
+        contactForm.reset();
+        formStatus.textContent = "sent ✓ — I'll reply soon.";
+      } else {
+        formStatus.textContent = "couldn't send — please email vroy218@gmail.com directly.";
+      }
+    } catch {
+      formStatus.textContent = "couldn't send — please email vroy218@gmail.com directly.";
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
 }
