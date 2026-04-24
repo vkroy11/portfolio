@@ -221,10 +221,11 @@
             <li>Wrote custom native modules in <strong>Kotlin</strong> (Android) and <strong>Swift</strong> (iOS) to bridge platform-specific APIs and SDKs that lacked React Native wrappers.</li>
             <li>Integrated third-party SDKs end-to-end — <strong>Agora</strong> for real-time video sessions, <strong>Razorpay</strong> for in-app payments, Pushwoosh for push notifications, and Google Analytics for event tracking.</li>
             <li>Architected the frontend for real-time AI consultations and video sessions; defined component structure, navigation, and state patterns from scratch.</li>
+            <li>Designed a versioned <strong>PostgreSQL</strong> schema for user profiles — every write lands as a new immutable snapshot tagged with version + timestamp, so the RAG consultation bot gets full longitudinal context and the business gets compliance-grade audit trails for free. Migrated all production data with zero loss.</li>
             <li>Implemented secure OAuth flows and shipped OTA updates with EAS Update, maintaining zero-downtime releases.</li>
             <li>Led migration of backend services from <strong>AWS</strong> to <strong>GCP</strong>, managing cloud infrastructure for deployment, uptime, and security of production services.</li>
           </ul>
-          <p class="job__tags">React Native · Kotlin · Swift · TypeScript · Node.js · Agora · Razorpay · AWS · GCP · EAS · OAuth</p>
+          <p class="job__tags">React Native · Kotlin · Swift · TypeScript · Node.js · PostgreSQL · Agora · Razorpay · AWS · GCP · EAS · OAuth</p>
         </div>
       </li>
 
@@ -442,6 +443,10 @@
           <span class="dim">where the data lives</span>
         </div>
         <div class="tiles">
+          <a class="tile tile--featured" href="#" onclick="return false">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" />
+            <span>PostgreSQL</span>
+          </a>
           <a class="tile" href="#" onclick="return false">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" />
             <span>MongoDB</span>
